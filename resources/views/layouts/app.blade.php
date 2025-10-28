@@ -270,3 +270,9 @@
     </script>
   </body>
 </html>
+
+<!-- caminhos
+views>layouts>app.blade.php
+views>layouts>partials>footer.blade.php
+views>layouts>partials>header.blade.php
+views>auth>login.blade.php -->

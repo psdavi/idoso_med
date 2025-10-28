@@ -1,749 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90680653-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Sistema de Gestão de Medicamentos para Asilos e Casas de Repouso">
+  <meta name="author" content="IdosoMed System">
 
-      gtag('config', 'UA-90680653-2');
-    </script>
+  <title>IdosoMed - Sistema de Gestão de Medicamentos</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CSS do template Azia -->
+  <link href="{{ asset('assets/lib/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/typicons.font/typicons.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('assets/css/azia.css') }}">
 
+  <style>
+    .az-logo img {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 150px;
+      height: auto;
+    }
 
-    <!-- Meta -->
-    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
-    <meta name="author" content="BootstrapDash">
+    .welcome-hero {
+      background: linear-gradient(135deg, #560bd0 0%, #007bff 100%);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
 
-    <title>Azia Responsive Bootstrap 4 Dashboard Template</title>
+    .welcome-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
 
-    <!-- vendor css -->
-    <link href="../lib/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="../lib/typicons.font/typicons.css" rel="stylesheet">
-    <link href="../lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    .welcome-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
 
-    <!-- azia CSS -->
-    <link rel="stylesheet" href="../css/azia.css">
+    .feature-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+      height: 100%;
+    }
 
-  </head>
-  <body>
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
 
-    <div class="az-header">
-      <div class="container">
-        <div class="az-header-left">
-          <a href="index.html" class="az-logo"><span></span> azia</a>
-          <a href="" id="azMenuShow" class="az-header-menu-icon d-lg-none"><span></span></a>
-        </div><!-- az-header-left -->
-        <div class="az-header-menu">
-          <div class="az-header-menu-header">
-            <a href="index.html" class="az-logo"><span></span> azia</a>
-            <a href="" class="close">&times;</a>
-          </div><!-- az-header-menu-header -->
-          <ul class="nav">
-            <li class="nav-item active show">
-              <a href="index.html" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> Pages</a>
-              <nav class="az-menu-sub">
-                <a href="page-signin.html" class="nav-link">Sign In</a>
-                <a href="page-signup.html" class="nav-link">Sign Up</a>
-              </nav>
-            </li>
-            <li class="nav-item">
-              <a href="chart-chartjs.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Charts</a>
-            </li>
-            <li class="nav-item">
-              <a href="form-elements.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Forms</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i> Components</a>
-              <div class="az-menu-sub">
-                <div class="container">
-                  <div>
-                    <nav class="nav">
-                      <a href="elem-buttons.html" class="nav-link">Buttons</a>
-                      <a href="elem-dropdown.html" class="nav-link">Dropdown</a>
-                      <a href="elem-icons.html" class="nav-link">Icons</a>
-                      <a href="table-basic.html" class="nav-link">Table</a>
-                    </nav>
-                  </div>
-                </div><!-- container -->
-              </div>
-            </li>
-          </ul>
-        </div><!-- az-header-menu -->
-        <div class="az-header-right">
-          <a href="https://www.bootstrapdash.com/demo/azia-free/docs/documentation.html" target="_blank" class="az-header-search-link"><i class="far fa-file-alt"></i></a>
-          <a href="" class="az-header-search-link"><i class="fas fa-search"></i></a>
-          <div class="az-header-message">
-            <a href="#"><i class="typcn typcn-messages"></i></a>
-          </div><!-- az-header-message -->
-          <div class="dropdown az-header-notification">
-            <a href="" class="new"><i class="typcn typcn-bell"></i></a>
-            <div class="dropdown-menu">
-              <div class="az-dropdown-header mg-b-20 d-sm-none">
-                <a href="" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
-              </div>
-              <h6 class="az-notification-title">Notifications</h6>
-              <p class="az-notification-text">You have 2 unread notification</p>
-              <div class="az-notification-list">
-                <div class="media new">
-                  <div class="az-img-user"><img src="../img/faces/face2.jpg" alt=""></div>
-                  <div class="media-body">
-                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
-                    <span>Mar 15 12:32pm</span>
-                  </div><!-- media-body -->
-                </div><!-- media -->
-                <div class="media new">
-                  <div class="az-img-user online"><img src="../img/faces/face3.jpg" alt=""></div>
-                  <div class="media-body">
-                    <p><strong>Joyce Chua</strong> just created a new blog post</p>
-                    <span>Mar 13 04:16am</span>
-                  </div><!-- media-body -->
-                </div><!-- media -->
-                <div class="media">
-                  <div class="az-img-user"><img src="../img/faces/face4.jpg" alt=""></div> 
-                  <div class="media-body">
-                    <p><strong>Althea Cabardo</strong> just created a new blog post</p>
-                    <span>Mar 13 02:56am</span>
-                  </div><!-- media-body -->
-                </div><!-- media -->
-                <div class="media">
-                  <div class="az-img-user"><img src="../img/faces/face5.jpg" alt=""></div>
-                  <div class="media-body">
-                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
-                    <span>Mar 12 10:40pm</span>
-                  </div><!-- media-body -->
-                </div><!-- media -->
-              </div><!-- az-notification-list -->
-              <div class="dropdown-footer"><a href="">View All Notifications</a></div>
-            </div><!-- dropdown-menu -->
-          </div><!-- az-header-notification -->
-          <div class="dropdown az-profile-menu">
-            <a href="" class="az-img-user"><img src="../img/faces/face1.jpg" alt=""></a>
-            <div class="dropdown-menu">
-              <div class="az-dropdown-header d-sm-none">
-                <a href="" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
-              </div>
-              <div class="az-header-profile">
-                <div class="az-img-user">
-                  <img src="../img/faces/face1.jpg" alt="">
-                </div><!-- az-img-user -->
-                <h6>Aziana Pechon</h6>
-                <span>Premium Member</span>
-              </div><!-- az-header-profile -->
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(86, 11, 208, 0.1);
+    }
 
-              <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
-              <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
-              <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
-              <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
-              <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
-            </div><!-- dropdown-menu -->
-          </div>
-        </div><!-- az-header-right -->
-      </div><!-- container -->
-    </div><!-- az-header -->
+    .feature-icon i {
+      font-size: 2rem;
+      color: #560bd0;
+    }
 
-    <div class="az-content az-content-dashboard">
-      <div class="container">
-        <div class="az-content-body">
-          <div class="az-dashboard-one-title">
-            <div>
-              <h2 class="az-dashboard-title">Hi, welcome back!</h2>
-              <p class="az-dashboard-text">Your web analytics dashboard template.</p>
-            </div>
-            <div class="az-content-header-right">
-              <div class="media">
-                <div class="media-body">
-                  <label>Start Date</label>
-                  <h6>Oct 10, 2018</h6>
-                </div><!-- media-body -->
-              </div><!-- media -->
-              <div class="media">
-                <div class="media-body">
-                  <label>End Date</label>
-                  <h6>Oct 23, 2018</h6>
-                </div><!-- media-body -->
-              </div><!-- media -->
-              <div class="media">
-                <div class="media-body">
-                  <label>Event Category</label>
-                  <h6>All Categories</h6>
-                </div><!-- media-body -->
-              </div><!-- media -->
-              <a href="" class="btn btn-purple">Export</a>
-            </div>
-          </div><!-- az-dashboard-one-title -->
+    .login-section {
+      background: #f8f9fa;
+      padding: 80px 0;
+    }
 
-          <div class="az-dashboard-nav"> 
-            <nav class="nav">
-              <a class="nav-link active" data-toggle="tab" href="#">Overview</a>
-              <a class="nav-link" data-toggle="tab" href="#">Audiences</a>
-              <a class="nav-link" data-toggle="tab" href="#">Demographics</a>
-              <a class="nav-link" data-toggle="tab" href="#">More</a>
-            </nav>
+    .login-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
-            <nav class="nav">
-              <a class="nav-link" href="#"><i class="far fa-save"></i> Save Report</a>
-              <a class="nav-link" href="#"><i class="far fa-file-pdf"></i> Export to PDF</a>
-              <a class="nav-link" href="#"><i class="far fa-envelope"></i>Send to Email</a>
-              <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
-            </nav>
-          </div>
+    .access-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+    }
 
-          <div class="row row-sm mg-b-20">
-            <div class="col-lg-7 ht-lg-100p">
-              <div class="card card-dashboard-one">
-                <div class="card-header">
-                  <div>
-                    <h6 class="card-title">Website Audience Metrics</h6>
-                    <p class="card-text">Audience to which the users belonged while on the current date range.</p>
-                  </div>
-                  <div class="btn-group">
-                    <button class="btn active">Day</button>
-                    <button class="btn">Week</button>
-                    <button class="btn">Month</button>
-                  </div>
-                </div><!-- card-header -->
-                <div class="card-body">
-                  <div class="card-body-top">
-                    <div>
-                      <label class="mg-b-0">Users</label>
-                      <h2>13,956</h2>
-                    </div>
-                    <div>
-                      <label class="mg-b-0">Bounce Rate</label>
-                      <h2>33.50%</h2>
-                    </div>
-                    <div>
-                      <label class="mg-b-0">Page Views</label>
-                      <h2>83,123</h2>
-                    </div>
-                    <div>
-                      <label class="mg-b-0">Sessions</label>
-                      <h2>16,869</h2>
-                    </div>
-                  </div><!-- card-body-top -->
-                  <div class="flot-chart-wrapper">
-                    <div id="flotChart" class="flot-chart"></div>
-                  </div><!-- flot-chart-wrapper -->
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-            <div class="col-lg-5 mg-t-20 mg-lg-t-0">
-              <div class="row row-sm">
-                <div class="col-sm-6">
-                  <div class="card card-dashboard-two">
-                    <div class="card-header">
-                      <h6>33.50% <i class="icon ion-md-trending-up tx-success"></i> <small>18.02%</small></h6>
-                      <p>Bounce Rate</p>
-                    </div><!-- card-header -->
-                    <div class="card-body">
-                      <div class="chart-wrapper">
-                        <div id="flotChart1" class="flot-chart"></div>
-                      </div><!-- chart-wrapper -->
-                    </div><!-- card-body -->
-                  </div><!-- card -->
-                </div><!-- col -->
-                <div class="col-sm-6 mg-t-20 mg-sm-t-0">
-                  <div class="card card-dashboard-two">
-                    <div class="card-header">
-                      <h6>86k <i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small></h6>
-                      <p>Total Users</p>
-                    </div><!-- card-header -->
-                    <div class="card-body">
-                      <div class="chart-wrapper">
-                        <div id="flotChart2" class="flot-chart"></div>
-                      </div><!-- chart-wrapper -->
-                    </div><!-- card-body -->
-                  </div><!-- card -->
-                </div><!-- col -->
-                <div class="col-sm-12 mg-t-20">
-                  <div class="card card-dashboard-three">
-                    <div class="card-header">
-                      <p>All Sessions</p>
-                      <h6>16,869 <small class="tx-success"><i class="icon ion-md-arrow-up"></i> 2.87%</small></h6>
-                      <small>The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc.</small>
-                    </div><!-- card-header -->
-                    <div class="card-body">
-                      <div class="chart"><canvas id="chartBar5"></canvas></div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- row -->
-            </div><!--col -->
-          </div><!-- row -->
+    .access-card:hover {
+      transform: translateY(-3px);
+    }
 
-          <div class="row row-sm mg-b-20">
-            <div class="col-lg-4">
-              <div class="card card-dashboard-pageviews">
-                <div class="card-header">
-                  <h6 class="card-title">Page Views by Page Title</h6>
-                  <p class="card-text">This report is based on 100% of sessions.</p>
-                </div><!-- card-header -->
-                <div class="card-body">
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Admin Home</h6>
-                      <span>/demo/admin/index.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">7,755</h6>
-                      <span>31.74% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Form Elements</h6>
-                      <span>/demo/admin/forms.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">5,215</h6>
-                      <span>28.53% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Utilities</h6>
-                      <span>/demo/admin/util.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">4,848</h6>
-                      <span>25.35% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Form Validation</h6>
-                      <span>/demo/admin/validation.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">3,275</h6>
-                      <span>23.17% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Modals</h6>
-                      <span>/demo/admin/modals.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">3,003</h6>
-                      <span>22.21% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                </div><!-- card-body -->
-              </div><!-- card -->
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
 
-            </div><!-- col -->
-            <div class="col-lg-8 mg-t-20 mg-lg-t-0">
-              <div class="card card-dashboard-four">
-                <div class="card-header">
-                  <h6 class="card-title">Sessions by Channel</h6>
-                </div><!-- card-header -->
-                <div class="card-body row">
-                  <div class="col-md-6 d-flex align-items-center">
-                    <div class="chart"><canvas id="chartDonut"></canvas></div>
-                  </div><!-- col -->
-                  <div class="col-md-6 col-lg-5 mg-lg-l-auto mg-t-20 mg-md-t-0">
-                    <div class="az-traffic-detail-item">
-                      <div>
-                        <span>Organic Search</span>
-                        <span>1,320 <span>(25%)</span></span>
-                      </div>
-                      <div class="progress">
-                        <div class="progress-bar bg-purple wd-25p" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div><!-- progress -->
-                    </div>
-                    <div class="az-traffic-detail-item">
-                      <div>
-                        <span>Email</span>
-                        <span>987 <span>(20%)</span></span>
-                      </div>
-                      <div class="progress">
-                        <div class="progress-bar bg-primary wd-20p" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div><!-- progress -->
-                    </div>
-                    <div class="az-traffic-detail-item">
-                      <div>
-                        <span>Referral</span>
-                        <span>2,010 <span>(30%)</span></span>
-                      </div>
-                      <div class="progress">
-                        <div class="progress-bar bg-info wd-30p" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div><!-- progress -->
-                    </div>
-                    <div class="az-traffic-detail-item">
-                      <div>
-                        <span>Social</span>
-                        <span>654 <span>(15%)</span></span>
-                      </div>
-                      <div class="progress">
-                        <div class="progress-bar bg-teal wd-15p" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div><!-- progress -->
-                    </div>
-                    <div class="az-traffic-detail-item">
-                      <div>
-                        <span>Other</span>
-                        <span>400 <span>(10%)</span></span>
-                      </div>
-                      <div class="progress">
-                        <div class="progress-bar bg-gray-500 wd-10p" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div><!-- progress -->
-                    </div>
-                  </div><!-- col -->
-                </div><!-- card-body -->
-              </div><!-- card-dashboard-four -->
-            </div><!-- col -->
-          </div><!-- row -->
+    footer {
+      background: #343a40;
+      color: white;
+      padding: 30px 0;
+    }
 
-          <div class="row row-sm mg-b-20 mg-lg-b-0">
-            <div class="col-lg-5 col-xl-4">
-              <div class="row row-sm">
-                <div class="col-md-6 col-lg-12 mg-b-20 mg-md-b-0 mg-lg-b-20">
-                  <div class="card card-dashboard-five">
-                    <div class="card-header">
-                      <h6 class="card-title">Acquisition</h6>
-                      <span class="card-text">Tells you where your visitors originated from, such as search engines, social networks or website referrals.</span>
-                    </div><!-- card-header -->
-                    <div class="card-body row row-sm">
-                      <div class="col-6 d-sm-flex align-items-center">
-                        <div class="card-chart bg-primary">
-                          <span class="peity-bar" data-peity='{"fill": ["#fff"], "width": 20, "height": 20 }'>6,4,7,5,7</span>
-                        </div>
-                        <div>
-                          <label>Bounce Rate</label>
-                          <h4>33.50%</h4>
-                        </div>
-                      </div><!-- col -->
-                      <div class="col-6 d-sm-flex align-items-center">
-                        <div class="card-chart bg-purple">
-                          <span class="peity-bar" data-peity='{"fill": ["#fff"], "width": 21, "height": 20 }'>7,4,5,7,2</span>
-                        </div>
-                        <div>
-                          <label>Sessions</label>
-                          <h4>9,065</h4>
-                        </div>
-                      </div><!-- col -->
-                    </div><!-- card-body -->
-                  </div><!-- card-dashboard-five -->
-                </div><!-- col -->
-                <div class="col-md-6 col-lg-12">
-                  <div class="card card-dashboard-five">
-                    <div class="card-header">
-                      <h6 class="card-title">Sessions</h6>
-                      <span class="card-text"> A session is the period time a user is actively engaged with your website, app, etc.</span>
-                    </div><!-- card-header -->
-                    <div class="card-body row row-sm">
-                      <div class="col-6 d-sm-flex align-items-center">
-                        <div class="mg-b-10 mg-sm-b-0 mg-sm-r-10">
-                          <span class="peity-donut" data-peity='{ "fill": ["#007bff", "#cad0e8"],  "innerRadius": 14, "radius": 20 }'>4/7</span>
-                        </div>
-                        <div>
-                          <label>% New Sessions</label>
-                          <h4>26.80%</h4>
-                        </div>
-                      </div><!-- col -->
-                      <div class="col-6 d-sm-flex align-items-center">
-                        <div class="mg-b-10 mg-sm-b-0 mg-sm-r-10">
-                          <span class="peity-donut" data-peity='{ "fill": ["#00cccc", "#cad0e8"],  "innerRadius": 14, "radius": 20 }'>2/7</span>
-                        </div>
-                        <div>
-                          <label>Pages/Session</label>
-                          <h4>1,005</h4>
-                        </div>
-                      </div><!-- col -->
-                    </div><!-- card-body -->
-                  </div><!-- card-dashboard-five -->
-                </div><!-- col -->
-              </div><!-- row -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-7 col-xl-8 mg-t-20 mg-lg-t-0">
-              <div class="card card-table-one">
-                <h6 class="card-title">What pages do your users visit</h6>
-                <p class="az-content-text mg-b-20">Part of this date range occurs before the new users metric had been calculated, so the old users metric is displayed.</p>
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th class="wd-5p">&nbsp;</th>
-                        <th class="wd-45p">Country</th>
-                        <th>Entrances</th>
-                        <th>Bounce Rate</th>
-                        <th>Exits</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><i class="flag-icon flag-icon-us flag-icon-squared"></i></td>
-                        <td><strong>United States</strong></td>
-                        <td><strong>134</strong> (1.51%)</td>
-                        <td>33.58%</td>
-                        <td>15.47%</td>
-                      </tr>
-                      <tr>
-                        <td><i class="flag-icon flag-icon-gb flag-icon-squared"></i></td>
-                        <td><strong>United Kingdom</strong></td>
-                        <td><strong>290</strong> (3.30%)</td>
-                        <td>9.22%</td>
-                        <td>7.99%</td>
-                      </tr>
-                      <tr>
-                        <td><i class="flag-icon flag-icon-in flag-icon-squared"></i></td>
-                        <td><strong>India</strong></td>
-                        <td><strong>250</strong> (3.00%)</td>
-                        <td>20.75%</td>
-                        <td>2.40%</td>
-                      </tr>
-                      <tr>
-                        <td><i class="flag-icon flag-icon-ca flag-icon-squared"></i></td>
-                        <td><strong>Canada</strong></td>
-                        <td><strong>216</strong> (2.79%)</td>
-                        <td>32.07%</td>
-                        <td>15.09%</td>
-                      </tr>
-                      <tr>
-                        <td><i class="flag-icon flag-icon-fr flag-icon-squared"></i></td>
-                        <td><strong>France</strong></td>
-                        <td><strong>216</strong> (2.79%)</td>
-                        <td>32.07%</td>
-                        <td>15.09%</td>
-                      </tr>
-                      <tr>
-                        <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td>
-                        <td><strong>Philippines</strong></td>
-                        <td><strong>197</strong> (2.12%)</td>
-                        <td>32.07%</td>
-                        <td>15.09%</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><!-- table-responsive -->
-              </div><!-- card -->
-            </div><!-- col-lg -->
+    .btn-hero {
+      padding: 12px 35px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+    }
 
-          </div><!-- row -->
-        </div><!-- az-content-body -->
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-heartbeat mr-2"></i>
+        <strong>IdosoMed</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Recursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#login">Acesso</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light ml-2" href="{{ route('login') }}">Entrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-az-primary ml-2" href="{{ route('register') }}">Cadastrar</a>
+          </li>
+        </ul>
       </div>
-    </div><!-- az-content -->
+    </div>
+  </nav>
 
-    <div class="az-footer ht-40">
-      <div class="container ht-100p pd-t-0-f">
-        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
-      </div><!-- container -->
-    </div><!-- az-footer -->
+  <!-- Hero Section -->
+  <section class="welcome-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="az-logo">
+            <img src="{{ asset('assets/img/idoso_med_logo.png') }}" alt="Logo do IdosoMed">
+          </div>
+          <h1>Controle Inteligente de Medicamentos para Idosos</h1>
+          <p>Sistema desenvolvido para auxiliar instituições e cuidadores na administração segura de medicamentos. Organize horários, registre tratamentos e garanta que cada dose seja aplicada no momento certo.</p>
+          <div class="mt-4">
+            <a href="{{ route('register') }}" class="btn btn-light btn-hero mr-3">
+              <i class="fas fa-rocket mr-2"></i>Começar Agora
+            </a>
+            <a href="#features" class="btn btn-outline-light btn-hero">
+              <i class="fas fa-play-circle mr-2"></i>Saiba Mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Recursos do Sistema</h2>
+        <p>Tudo que você precisa para uma gestão medicamentosa segura e eficiente</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h4>Controle de Horários</h4>
+              <p class="text-muted mb-0">Alertas automáticos para administração de medicamentos nos horários corretos</p>
+            </div>
+          </div>
+        </div>
 
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/ionicons/ionicons.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
-    <script src="../lib/chart.js/Chart.bundle.min.js"></script>
-    <script src="../lib/peity/jquery.peity.min.js"></script>
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon">
+                <i class="fas fa-pills"></i>
+              </div>
+              <h4>Gestão de Estoque</h4>
+              <p class="text-muted mb-0">Controle completo do estoque de medicamentos com alertas de reposição</p>
+            </div>
+          </div>
+        </div>
 
-    <script src="../js/azia.js"></script>
-    <script src="../js/chart.flot.sampledata.js"></script>
-    <script src="../js/dashboard.sampledata.js"></script>
-    <script src="../js/jquery.cookie.js" type="text/javascript"></script>
-    <script>
-      $(function(){
-        'use strict'
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon">
+                <i class="fas fa-file-medical"></i>
+              </div>
+              <h4>Prontuários Eletrônicos</h4>
+              <p class="text-muted mb-0">Registro digital completo do histórico medicamentoso de cada residente</p>
+            </div>
+          </div>
+        </div>
 
-    		var plot = $.plot('#flotChart', [{
-          data: flotSampleData3,
-          color: '#007bff',
-          lines: {
-            fillColor: { colors: [{ opacity: 0 }, { opacity: 0.2 }]}
-          }
-        },{
-          data: flotSampleData4,
-          color: '#560bd0',
-          lines: {
-            fillColor: { colors: [{ opacity: 0 }, { opacity: 0.2 }]}
-          }
-        }], {
-    			series: {
-    				shadowSize: 0,
-            lines: {
-              show: true,
-              lineWidth: 2,
-              fill: true
-            }
-    			},
-          grid: {
-            borderWidth: 0,
-            labelMargin: 8
-          },
-    			yaxis: {
-            show: true,
-    				min: 0,
-    				max: 100,
-            ticks: [[0,''],[20,'20K'],[40,'40K'],[60,'60K'],[80,'80K']],
-            tickColor: '#eee'
-    			},
-    			xaxis: {
-            show: true,
-            color: '#fff',
-            ticks: [[25,'OCT 21'],[75,'OCT 22'],[100,'OCT 23'],[125,'OCT 24']],
-          }
-        });
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h4>Alertas Inteligentes</h4>
+              <p class="text-muted mb-0">Notificações para interações medicamentosas e contraindicações</p>
+            </div>
+          </div>
+        </div>
 
-        $.plot('#flotChart1', [{
-          data: dashData2,
-          color: '#00cccc'
-        }], {
-    			series: {
-    				shadowSize: 0,
-            lines: {
-              show: true,
-              lineWidth: 2,
-              fill: true,
-              fillColor: { colors: [ { opacity: 0.2 }, { opacity: 0.2 } ] }
-            }
-    			},
-          grid: {
-            borderWidth: 0,
-            labelMargin: 0
-          },
-    			yaxis: {
-            show: false,
-            min: 0,
-            max: 35
-          },
-    			xaxis: {
-            show: false,
-            max: 50
-          }
-    		});
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h4>Relatórios Detalhados</h4>
+              <p class="text-muted mb-0">Relatórios personalizados para acompanhamento e auditoria</p>
+            </div>
+          </div>
+        </div>
 
-        $.plot('#flotChart2', [{
-          data: dashData2,
-          color: '#007bff'
-        }], {
-    			series: {
-    				shadowSize: 0,
-            bars: {
-              show: true,
-              lineWidth: 0,
-              fill: 1,
-              barWidth: .5
-            }
-    			},
-          grid: {
-            borderWidth: 0,
-            labelMargin: 0
-          },
-    			yaxis: {
-            show: false,
-            min: 0,
-            max: 35
-          },
-    			xaxis: {
-            show: false,
-            max: 20
-          }
-    		});
+        <div class="col-lg-4 col-md-6">
+          <div class="card feature-card">
+            <div class="card-body text-center p-4">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h4>Acesso Mobile</h4>
+              <p class="text-muted mb-0">Acesso via tablets e smartphones para a equipe de enfermagem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" style="background: #f8f9fa;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-4">Sobre o IdosoMed</h2>
+          <p class="lead">O <strong>IdosoMed</strong> é um sistema desenvolvido especialmente para instituições de longa permanência, casas de repouso e cuidadores profissionais.</p>
+          <p>Nossa missão é facilitar a administração de medicamentos para idosos, garantindo segurança, organização e conformidade com as prescrições médicas.</p>
+          <p>Com o IdosoMed, você tem controle total sobre:</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-check text-success mr-2"></i>Horários de medicação</li>
+            <li class="mb-2"><i class="fas fa-check text-success mr-2"></i>Histórico completo de cada residente</li>
+            <li class="mb-2"><i class="fas fa-check text-success mr-2"></i>Estoque de medicamentos</li>
+            <li class="mb-2"><i class="fas fa-check text-success mr-2"></i>Relatórios para auditoria</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body p-5 text-center">
+              <i class="fas fa-heartbeat" style="font-size: 5rem; color: #560bd0; opacity: 0.2;"></i>
+              <h3 class="mt-4 mb-3">Cuidando de quem cuidou de nós</h3>
+              <p class="text-muted">Desenvolvido com tecnologia e carinho para garantir o bem-estar dos nossos idosos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        //-------------------------------------------------------------//
+  <!-- Login Section -->
+  <section id="login" class="login-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <h2 class="mb-4">Já possui uma conta?</h2>
+          <p class="lead mb-4">Acesse o sistema e gerencie os medicamentos dos residentes de forma segura e organizada.</p>
+          
+          <div class="row">
+            <div class="col-12">
+              <div class="card access-card">
+                <div class="card-body text-center py-4">
+                  <i class="fas fa-user-nurse fa-3x text-primary mb-3"></i>
+                  <h5>Equipe de Enfermagem</h5>
+                  <p class="text-muted small mb-3">Acesso para registrar e acompanhar medicações</p>
+                  <a href="{{ route('login') }}" class="btn btn-az-primary btn-sm px-4">Acessar Sistema</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card access-card">
+                <div class="card-body text-center py-4">
+                  <i class="fas fa-user-md fa-3x text-success mb-3"></i>
+                  <h5>Médicos e Gestores</h5>
+                  <p class="text-muted small mb-3">Acesso para prescrições e relatórios</p>
+                  <a href="{{ route('login') }}" class="btn btn-outline-success btn-sm px-4">Acessar Sistema</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-lg-7">
+          <div class="card login-card">
+            <div class="card-body p-5">
+              <div class="az-logo">
+                <img src="{{ asset('assets/img/idoso_med_logo.png') }}" alt="Logo do IdosoMed">
+              </div>
+              <h3 class="text-center mb-2">Acesso ao Sistema</h3>
+              <p class="text-center text-muted mb-4">Entre com suas credenciais</p>
+              
+              <form method="POST" action="{{ route('login') }}">
+                @csrf
+                
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input id="email" 
+                         type="email" 
+                         class="form-control @error('email') is-invalid @enderror" 
+                         name="email" 
+                         value="{{ old('email') }}" 
+                         required 
+                         autofocus
+                         placeholder="Digite seu e-mail">
+                  @error('email')
+                    <small class="text-danger">{{ $message }}</small>
+                  @enderror
+                </div>
 
-        // Line chart
-        $('.peity-line').peity('line');
+                <div class="form-group">
+                  <label for="password">Senha</label>
+                  <input id="password" 
+                         type="password" 
+                         class="form-control @error('password') is-invalid @enderror" 
+                         name="password" 
+                         required
+                         placeholder="Digite sua senha">
+                  @error('password')
+                    <small class="text-danger">{{ $message }}</small>
+                  @enderror
+                </div>
 
-        // Bar charts
-        $('.peity-bar').peity('bar');
+                <div class="form-group d-flex justify-content-between align-items-center">
+                  <label class="ckbox mb-0">
+                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <span>Lembrar-me</span>
+                  </label>
+                  @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}">Esqueceu sua senha?</a>
+                  @endif
+                </div>
 
-        // Bar charts
-        $('.peity-donut').peity('donut');
+                <button type="submit" class="btn btn-az-primary btn-block">Entrar no Sistema</button>
+              </form>
 
-        var ctx5 = document.getElementById('chartBar5').getContext('2d');
-        new Chart(ctx5, {
-          type: 'bar',
-          data: {
-            labels: [0,1,2,3,4,5,6,7],
-            datasets: [{
-              data: [2, 4, 10, 20, 45, 40, 35, 18],
-              backgroundColor: '#560bd0'
-            }, {
-              data: [3, 6, 15, 35, 50, 45, 35, 25],
-              backgroundColor: '#cad0e8'
-            }]
-          },
-          options: {
-            maintainAspectRatio: false,
-            tooltips: {
-              enabled: false
-            },
-            legend: {
-              display: false,
-                labels: {
-                  display: false
-                }
-            },
-            scales: {
-              yAxes: [{
-                display: false,
-                ticks: {
-                  beginAtZero:true,
-                  fontSize: 11,
-                  max: 80
-                }
-              }],
-              xAxes: [{
-                barPercentage: 0.6,
-                gridLines: {
-                  color: 'rgba(0,0,0,0.08)'
-                },
-                ticks: {
-                  beginAtZero:true,
-                  fontSize: 11,
-                  display: false
-                }
-              }]
-            }
-          }
-        });
+              <hr class="my-4">
+              
+              <div class="text-center">
+                <p class="mb-0">Não possui conta? <a href="{{ route('register') }}">Cadastre-se agora</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Donut Chart
-        var datapie = {
-          labels: ['Search', 'Email', 'Referral', 'Social', 'Other'],
-          datasets: [{
-            data: [25,20,30,15,10],
-            backgroundColor: ['#6f42c1', '#007bff','#17a2b8','#00cccc','#adb2bd']
-          }]
-        };
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+          <h5><i class="fas fa-heartbeat mr-2"></i>IdosoMed System</h5>
+          <p class="text-muted mb-0">Sistema de gestão de medicamentos para asilos e casas de repouso.</p>
+          <p class="text-muted">Desenvolvido com ❤️ para cuidar de quem cuidou de nós</p>
+        </div>
+        <div class="col-lg-6 text-lg-right">
+          <p class="text-muted mb-2">&copy; 2024 IdosoMed System. Todos os direitos reservados.</p>
+          <div>
+            <a href="#" class="text-white mr-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        var optionpie = {
-          maintainAspectRatio: false,
-          responsive: true,
-          legend: {
-            display: false,
-          },
-          animation: {
-            animateScale: true,
-            animateRotate: true
-          }
-        };
+  <!-- Scripts -->
+  <script src="{{ asset('assets/lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/ionicons/ionicons.js') }}"></script>
+  <script src="{{ asset('assets/js/azia.js') }}"></script>
 
-        // For a doughnut chart
-        var ctxpie= document.getElementById('chartDonut');
-        var myPieChart6 = new Chart(ctxpie, {
-          type: 'doughnut',
-          data: datapie,
-          options: optionpie
-        });
+  <script>
+    $(function(){
+      'use strict'
 
-      });
-    </script>
-  </body>
+      // Smooth scrolling for navigation links
+      $('a[href*="#"]').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault()
+          var hash = this.hash
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - 70
+          }, 500, 'linear')
+        }
+      })
+    });
+  </script>
+</body>
 </html>
